@@ -6,3 +6,9 @@
     = link_to 'Apagar', note, :confirm => 'Você tem certeza?', :method => :delete, :class => 'links_button'
     = link_to 'Editar', edit_note_path(note), :class => 'links_button'
     =raw note.text
+    - if note.tags.size > 0
+      .tags
+        %b Tags: 
+        %i 
+          = note.tag_list  
+        

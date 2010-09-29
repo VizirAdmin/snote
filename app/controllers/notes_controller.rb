@@ -2,7 +2,7 @@
 class NotesController < ApplicationController
   
   def index
-    @notes = Note.all
+    @notes = Note.all(:order=>"id DESC")
 
     respond_to do |format|
       format.html
@@ -19,7 +19,6 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
-
     respond_to do |format|
       format.html
     end
@@ -28,12 +27,11 @@ class NotesController < ApplicationController
   def edit
     @note = Note.find(params[:id])
     @note.textiled = false
-    @note.text = @note.text_source
-
   end
 
   def create
     @note = Note.new(params[:note])
+    @note.textiled = false
     @note.tag_list = params[:tags]
     respond_to do |format|
       if @note.save
@@ -46,7 +44,8 @@ class NotesController < ApplicationController
 
   def update
     @note = Note.find(params[:id])
-
+    @note.textiled = false
+    @note.tag_list = params[:tags]
     respond_to do |format|
       if @note.update_attributes(params[:note])
         format.html { redirect_to(notes_url, :notice => 'Anotação atualizada com sucesso!') }
