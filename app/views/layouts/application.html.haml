@@ -1,0 +1,13 @@
+!!!
+%html(lang='pt-BR')
+  %head
+    %meta(charset='utf-8')
+    %title Snote
+  = stylesheet_link_tag :all
+  = javascript_include_tag :defaults
+  = csrf_meta_tag
+
+  %body
+    #snote
+      = yield
+

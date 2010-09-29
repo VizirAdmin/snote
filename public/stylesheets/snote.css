@@ -1,0 +1,138 @@
+body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;}
+
+*{outline:none;}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #444444;}
+a:hover {
+  background-color:#FFF000;
+  color:#000000;
+  text-decoration:none;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#snote #form{
+  width:95%;
+  margin: 0 0 0 2%;
+}
+
+#snote textarea {width:98%;}
+
+#snote .note {
+  -moz-border-radius:5px 5px 5px 5px;
+  -webkit-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
+  background:none repeat scroll 0 0 #CCCCCC;
+  clear:both;
+  display:block;
+  width:95%;
+  margin: 2% 1%;
+  padding:10px;
+}
+
+#snote h1{color:#111111;}
+
+.links_button{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  box-shadow: 0 1px 3px #999;
+  background:url("/images/alert-overlay.png") repeat-x scroll 0 0 #FFB515;
+  color:#FFFFFF;
+  cursor:pointer;
+  display:inline-block;
+  float:right;
+  font-weight:bold;
+  line-height:1;
+  margin-left:10px;
+  padding:5px 10px 6px;
+  position:relative;
+  text-decoration:none;
+  text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.links_button:hover{
+  background-color:#FC9200;
+  color:#FFFFFF;
+}
+
+#snote .new .links_button{background-color:#222222; float:left;margin:-2px 0 10px 13px;
+}
+#snote .new .links_button:hover{background-color:#111111;}
+
+#snote .new{float:left;margin:8px 0 0 10px;}
+
+#snote #logo{float:left;padding-bottom:10px;}
+
+#snote #help_text{
+  min-width:200px;
+  padding:5px 20px 0 9px;
+}
+
+#snote .textileexamples{margin-left:15px}
+
+.Left{
+  float:left;
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:70%;
+}
+.Right {
+  float:left;
+  margin:0 0 0;
+  padding:0;
+  text-align:left;
+  width:30%;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
