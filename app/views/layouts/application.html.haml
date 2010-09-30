@@ -12,4 +12,5 @@
       = image_tag "/images/snote_title.png", :id =>'logo'
       = link_to "Logout", destroy_user_session_path, :id =>'logout_link' if current_user
       = yield
+    = google_analytics
 
