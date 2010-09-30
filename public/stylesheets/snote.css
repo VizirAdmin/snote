@@ -34,7 +34,7 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
-#snote #login_form{
+#snote #bg_form{
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
@@ -42,12 +42,10 @@ div.field, div.actions {
   float:right;
   margin:5px 5px 0 0;
   padding:30px;
+  clear:both;
 }
 
-#logout_link {
-float:right;
-margin:0 10px 0 0;
-}
+#links_menu {float:right; margin:0 10px 0 0;}
 
 .links_button:hover{
   background-color:#FC9200;

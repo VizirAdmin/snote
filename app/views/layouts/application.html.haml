@@ -10,7 +10,12 @@
   %body
     #snote
       = image_tag "/images/snote_title.png", :id =>'logo'
-      = link_to "Logout", destroy_user_session_path, :id =>'logout_link' if current_user
+      - if current_user
+        #links_menu
+          = link_to I18n.t('user.edit_link'), edit_user_registration_path
+          |
+          = link_to I18n.t('logout'), destroy_user_session_path 
+
       = yield
     = google_analytics
 

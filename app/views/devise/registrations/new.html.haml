@@ -1,10 +1,11 @@
-#login_form
-  %h2 Cadastro
+#bg_form
+  %h2 
+    =I18n.t('user.creating')
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     - if @user.errors.any?
       .error_explanation
       %h2 
-        = pluralize(@user.errors.count, "erro")
+        = pluralize(@user.errors.count, I18n.t('error'))
       %ul
         - @user.errors.full_messages.each do |msg|
           %li 
@@ -21,5 +22,5 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation
-    %p= f.submit "Cadastrar"
+    %p= f.submit I18n.t('user.sign_up')
 

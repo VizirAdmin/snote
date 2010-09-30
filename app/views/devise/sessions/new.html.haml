@@ -1,5 +1,6 @@
-#login_form
-  %h2 Login
+#bg_form
+  %h2 
+    = I18n.t('login')
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     = alert
     %p
@@ -14,5 +15,5 @@
       %p
         = f.check_box :remember_me
         = f.label :remember_me
-    %p= f.submit "Login"
-  = link_to "Fazer o cadastro", new_user_registration_path
+    %p= f.submit I18n.t('login')
+  = link_to I18n.t('user.sign_up'), new_user_registration_path

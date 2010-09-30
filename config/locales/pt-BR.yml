@@ -1,4 +1,24 @@
 pt-BR:
+  # snote
+  confirmation: "Você tem certeza?"
+  back: "Voltar"
+  error: "Erro"
+  login: "Login"
+  update: "Atualizar"
+  logout: "Logout"
+  note:
+    new: "Nova"
+    edit: "Editar"
+    delete: "Apagar"
+    creating: "Criando anotação"
+    editing: "Editando anotação"
+    notags: "Sem tags."
+  user:
+    creating: "Registro"
+    sign_up: "Registrar-se"
+    edit: "Editar"
+    edit_link: "Editar usuário"
+    editing: "Editando usuário"
   helpers:
     submit:
       create: "Criar {{model}}"
@@ -191,7 +211,7 @@ pt-BR:
         record_invalid: "A validação falhou: %{errors}"
   devise:
     failure:
-      unauthenticated: 'Para continuar, deve fazer login ou registrar-se.'
+      unauthenticated: 'Para continuar, você deve fazer login ou registrar-se.'
       unconfirmed: 'Antes de continuar, deve confirmar a sua conta.'
       locked: 'A sua conta está bloqueada.'
       invalid: 'O e-mail ou a senha não são válidos.'
@@ -210,7 +230,9 @@ pt-BR:
     registrations:
       signed_up: 'Fez login com sucesso. Se não autorizado, a confirmação foi enviada ao endereço do seu correio electrónico.'
       updated: 'A sua conta foi atualizada com sucesso.'
-      destroyed: 'Adéus! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
+      destroyed: 'Adeus! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
+      hint_alter_password: "(deixe em branco, se não deseja alterar a sua senha.)"
+      hint_current_password: "(você precisa informar a sua senha atual, para efetuar a atualização da sua conta.)"
     unlocks:
       send_instructions: 'Dentro de minutos, receberá a mensagem electrónica com as instruções como desbloquear a sua conta.'
       unlocked: 'A sua conta foi desbloqueada com sucesso. Agora está conetado.'
