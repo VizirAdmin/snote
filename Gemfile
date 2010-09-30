@@ -4,11 +4,13 @@ gem 'rails', '3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'devise'
 gem 'mysql2'
 gem 'acts-as-taggable-on'
 gem 'RedCloth'
 gem 'haml'
+gem 'hpricot'
+gem 'ruby_parser'
 # Use unicorn as the web server
 # gem 'unicorn'
 

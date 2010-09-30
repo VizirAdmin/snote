@@ -1,8 +1,10 @@
 # coding: utf-8
 class NotesController < ApplicationController
   
+  before_filter :authenticate_user!
+  
   def index
-    @notes = Note.all(:order=>"id DESC")
+    @notes = Note.find_my_notes(current_user.id)
 
     respond_to do |format|
       format.html
@@ -33,6 +35,7 @@ class NotesController < ApplicationController
     @note = Note.new(params[:note])
     @note.textiled = false
     @note.tag_list = params[:tags]
+    @note.user_id = current_user.id
     respond_to do |format|
       if @note.save
         format.html { redirect_to(notes_url, :notice => 'Anotação criada com sucesso!') }

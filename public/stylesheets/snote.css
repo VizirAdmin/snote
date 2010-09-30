@@ -1,6 +1,6 @@
-body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;}
-
 *{outline:none;}
+
+body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -23,6 +23,7 @@ pre {
 }
 
 a { color: #444444;}
+
 a:hover {
   background-color:#FFF000;
   color:#000000;
@@ -33,9 +34,30 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
+#snote #login_form{
+  -moz-border-radius:5px 5px 5px 5px;
+  -webkit-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
+  background:none repeat scroll 0 0 #CCCCCC;
+  float:right;
+  margin:5px 5px 0 0;
+  padding:30px;
+}
+
+#logout_link {
+float:right;
+margin:0 10px 0 0;
+}
+
+.links_button:hover{
+  background-color:#FC9200;
+  color:#FFFFFF;
+}
+
 #snote #form{
   width:95%;
   margin: 0 0 0 2%;
+  float:left;
 }
 
 #snote textarea {width:98%;}
@@ -77,18 +99,13 @@ div.field, div.actions {
   text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.links_button:hover{
-  background-color:#FC9200;
-  color:#FFFFFF;
-}
-
 #snote .new .links_button{background-color:#222222; float:left;margin:-2px 0 10px 13px;
 }
 #snote .new .links_button:hover{background-color:#111111;}
 
 #snote .new{float:left;margin:8px 0 0 10px;}
 
-#snote #logo{float:left;padding-bottom:10px;}
+#snote #logo{float:left;display:block;padding-bottom:10px;}
 
 #snote #help_text{
   min-width:200px;

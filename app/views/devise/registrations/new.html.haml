@@ -1,0 +1,25 @@
+#login_form
+  %h2 Cadastro
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    - if @user.errors.any?
+      .error_explanation
+      %h2 
+        = pluralize(@user.errors.count, "erro")
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li 
+            = msg
+    %p
+      = f.label :email
+      %br/
+      = f.text_field :email
+    %p
+      = f.label :password
+      %br/
+      = f.password_field :password
+    %p
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation
+    %p= f.submit "Cadastrar"
+

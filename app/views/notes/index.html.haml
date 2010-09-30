@@ -1,4 +1,3 @@
-= image_tag "/images/snote_title.png", :id =>'logo'
 .new
   = link_to 'Nova', new_note_path, :class => 'links_button'
 - @notes.each do |note|
@@ -6,9 +5,12 @@
     = link_to 'Apagar', note, :confirm => 'Você tem certeza?', :method => :delete, :class => 'links_button'
     = link_to 'Editar', edit_note_path(note), :class => 'links_button'
     =raw note.text
-    - if note.tags.size > 0
-      .tags
-        %b Tags: 
-        %i 
+    .tags
+      %b Tags: 
+      %i 
+        - if note.tags.size > 0
           = note.tag_list  
+        - else
+          Sem tags.
+        
         
