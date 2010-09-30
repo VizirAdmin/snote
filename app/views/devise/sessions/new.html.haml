@@ -17,3 +17,8 @@
         = f.label :remember_me
     %p= f.submit I18n.t('login')
   = link_to I18n.t('user.sign_up'), new_user_registration_path
+#credit
+  %p
+    <strong>Um projeto <i>open source</i> desenvolvido por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc"}.
+  
+  <strong>Uma iniciativa do time do</strong> #{link_to "Vizir", "http://www.vizir.com.br/"}.      

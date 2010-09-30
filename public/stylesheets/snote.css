@@ -1,6 +1,6 @@
 *{outline:none;}
 
-body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;}
+body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;height: 100%;}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -125,4 +125,12 @@ div.field, div.actions {
   padding:0;
   text-align:left;
   width:30%;
+}
+
+#credit{
+  bottom:0;
+  margin-left:30%;
+  padding-bottom:5px;
+  position:absolute;
+  text-align:center;
 }
