@@ -1,14 +1,14 @@
 *{outline:none;}
 
-body { background:none repeat scroll 0 0 #EEEEEE; color: #323231;height: 100%;}
+body { background:none repeat scroll 0 0 #EEEEEE;color: #323231;height: 100%;}
 
-body, p, ol, ul, td {
+body, p, ol, ul, td{
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
 }
 
-pre {
+pre{
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
@@ -22,18 +22,17 @@ pre {
   padding:10px;
 }
 
-a { color: #444444;}
+a{color: #444444;}
 
-a:hover {
-  background-color:#FFF000;
-  color:#000000;
-  text-decoration:none;
+a:hover{background-color:#FFF000;color:#000000;text-decoration:none;}
+
+div.field, div.actions{margin-bottom: 10px;}
+
+#snote #explication{
+clear:left;
+margin:65px 0 0 50px;
+position:absolute;
 }
-
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
 #snote #bg_form{
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
@@ -45,22 +44,15 @@ div.field, div.actions {
   clear:both;
 }
 
-#links_menu {float:right; margin:0 10px 0 0;}
+#links_menu{float:right; margin:0 10px 0 0;}
 
-.links_button:hover{
-  background-color:#FC9200;
-  color:#FFFFFF;
-}
+.links_button:hover{background-color:#FC9200;color:#FFFFFF;}
 
-#snote #form{
-  width:95%;
-  margin: 0 0 0 2%;
-  float:left;
-}
+#snote #form{width:95%;margin: 0 0 0 2%;float:left;}
 
-#snote textarea {width:98%;}
+#snote textarea{width:98%;}
 
-#snote .note {
+#snote .note{
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
@@ -72,7 +64,7 @@ div.field, div.actions {
   padding:10px;
 }
 
-#snote .tags {padding:0 5px 0 0; text-align:right;}
+#snote .tags{padding:0 5px 0 0; text-align:right;}
 
 #snote h1{color:#111111;}
 
@@ -105,10 +97,7 @@ div.field, div.actions {
 
 #snote #logo{float:left;display:block;padding-bottom:10px;}
 
-#snote #help_text{
-  min-width:200px;
-  padding:5px 20px 0 9px;
-}
+#snote #help_text{min-width:200px;padding:5px 20px 0 9px;}
 
 #snote .textileexamples{margin-left:15px}
 
@@ -119,7 +108,7 @@ div.field, div.actions {
   text-align:left;
   width:70%;
 }
-.Right {
+.Right{
   float:left;
   margin:0 0 0;
   padding:0;
