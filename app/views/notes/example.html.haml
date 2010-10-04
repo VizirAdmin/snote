@@ -1,0 +1,162 @@
+.div{:style => "float:right"}
+  = link_to "Voltar para as minhas anotações", notes_path
+  &nbsp;|&nbsp;
+.Left{:style => "clear:left;width:47%;padding-right:10px;"}
+  .div{:style => "clear:both;padding-top:5px;color:#FFB515"}
+    %h2 Versão Textile:
+  %p h1. Exemplo de texto usando _Textile_
+  %p O *Snote* nasceu da necessidade de seu criador, em manter as suas anotações.
+  %p p. Ele é focado em gerenciar anotações, buscando ser:
+  %p
+    * Fácil
+    %br
+    ** Quando estamos criando uma anotação, queremos que ela seja criada de uma forma fácil, afinal se for muito difícil ou chato escrever a anotação, acabamos nem anotando nada.
+    %br
+    * Rápido
+    %br
+    ** Criar uma anotação deve ser uma tarefa rápida, pois caso contrário, acabamos não registrando uma anotação que pode ser importante no futuro.
+
+  %p h2. Texto pré-formatado
+
+  %p Com o Snote podemos por exemplo, adicionar textos pré-formatados de duas formas.
+
+  %p pre. sudo apt-get install ruby  
+
+  %p No caso em que o texto pré-formatado tiver mais de uma linha, podemos usar:
+
+  %p pre.. sudo apt-get install ruby rubygems 
+  %p sudo gem install rails
+
+  %p p. Para encerrar um texto pré-formatado de várias linhas utilizando a tag *pre..*, precisamos iniciar um novo bloco de forma implícita, utilizando por exemplo o *p.*.
+
+  %p Uma forma mais fléxivel de criar texto pré-formatado, é utilizar a própria tag do _html_ *pre*:
+
+  %p 
+    =h "<pre>sudo apt-get install ruby rubygems"
+    %br
+    =h "sudo gem install rails</pre>"
+        
+  %p Como acabamos de ver, também podemos utilizar todas as tags _html_ em nossas anotações. E com isso juntamos o melhor de dois mundos:
+
+  %p
+    \# A simplicidade da linguagem de marcação _Textile_;
+    %br
+    \# A flexibilidade e marcações avançadas do _html_.
+  %p  
+    h2. Tabela
+  %p  
+    table{border:1px solid black}.
+    %br
+      |\2=. Super-Heróis|
+    %br
+      |_. super-herói|_. Nome|
+    %br
+      |Homem-Aranha|Peter Park|
+    %br
+      |Homem de Ferro|Tony Stark|
+    %br
+      |Super-Homem|Clark Kent|
+    %br
+      |Batman|Bruce Wayne|
+  %p  
+    h2. Alinhamento
+  %p  
+    p<. Esquerda
+  %p  
+    p>. Direita
+  %p  
+    p=. Centro
+  %p  
+    h2. Citações
+  %p  
+    bq. Esta é uma citação
+  %p  
+    Outra forma de citar é:
+  %p  
+    bq.. Esta é uma outra citação
+  %p  
+    Com dois parágrafos.
+  %p  
+    h2. Notas de página
+  %p
+    O projeto do Snote é _opensource_ e seu código está disponível no Github.[1]
+  %p  
+    fn1. "Github":http://github.com/Vizir/snote
+  %p  
+    h2. Saiba mais
+  %p  
+    Saiba mais marcações em: "http://redcloth.org/textile":http://redcloth.org/textile
+
+.Right{:style => "width:51%;border-left:1px solid;padding-left:10px;"}
+  .div{:style => "clear:both;padding-top:5px;color:#FFB515"}
+    %h2 Versão renderizada:
+  :textile
+    h1. Exemplo de texto usando _Textile_
+
+    O *Snote* nasceu da necessidade de seu criador, em manter as suas anotações.
+
+    p. Ele é focado em gerenciar anotações, buscando ser:
+    * Fácil
+    ** Quando estamos criando uma anotação, queremos que ela seja criada de uma forma fácil, afinal se for muito difícil ou chato escrever a anotação, acabamos nem anotando nada.
+    * Rápido
+    ** Criar uma anotação deve ser uma tarefa rápida, pois caso contrário, acabamos não registrando uma anotação que pode ser importante no futuro.
+
+    h2. Texto pré-formatado
+
+    Com o Snote podemos por exemplo, adicionar textos pré-formatados de duas formas.
+
+    pre. sudo apt-get install ruby  
+
+    No caso em que o texto pré-formatado tiver mais de uma linha, podemos usar:
+
+    pre.. sudo apt-get install ruby rubygems 
+    sudo gem install rails
+
+    p. Para encerrar um texto pré-formatado de várias linhas utilizando a tag *pre..*, precisamos iniciar um novo bloco de forma implícita, utilizando por exemplo o *p.*.
+
+    Uma forma mais fléxivel de criar texto pré-formatado, é utilizar a própria tag do _html_ *pre*:
+
+    <pre>sudo apt-get install ruby rubygems
+    sudo apt-get install rails</pre>
+
+    Como acabamos de ver, também podemos utilizar todas as tags _html_ em nossas anotações. E com isso juntamos o melhor de dois mundos:
+    # A simplicidade da linguagem de marcação _Textile_;
+    # A flexibilidade e marcações avançadas do _html_.
+    
+    h2. Tabela
+    
+    table{border:1px solid black}.
+    |\2=. Super-Heróis|
+    |_. super-herói|_. Nome|
+    |Homem-Aranha|Peter Park|
+    |Homem de Ferro|Tony Stark|
+    |Super-Homem|Clark Kent|
+    |Batman|Bruce Wayne|
+    
+    h2. Alinhamento
+    
+    p<. Esquerda
+    
+    p>. Direita
+    
+    p=. Centro
+    
+    h2. Citações
+    
+    bq. Esta é uma citação
+    
+    Outra forma de citar é:
+    
+    bq.. Esta é uma outra citação
+    
+    Com dois parágrafos.
+    
+    h2. Notas de página
+    
+    O projeto do Snote é _opensource_ e seu código está disponível no Github.[1]
+    
+    fn1. "Github":http://github.com/Vizir/snote
+    
+    h2. Saiba mais
+    
+    Saiba mais marcações em: "http://redcloth.org/textile":http://redcloth.org/textile

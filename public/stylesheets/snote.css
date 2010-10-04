@@ -66,7 +66,7 @@ position:absolute;
 
 #snote .tags{padding:0 5px 0 0; text-align:right;}
 
-#snote h1{color:#111111;}
+#snote h1{border-bottom:1px solid #323231;color:#111111;padding-bottom:5px;}
 
 .links_button{
   -moz-border-radius: 5px;

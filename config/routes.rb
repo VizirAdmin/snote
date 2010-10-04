@@ -2,6 +2,7 @@ Snote::Application.routes.draw do
   devise_for :users
 
   root :to => "notes#index"
+  match 'notes/example' => "notes#example"
   resources :notes
   # The priority is based upon order of creation:
   # first created -> highest priority.

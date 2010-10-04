@@ -29,6 +29,7 @@ class NotesController < ApplicationController
   def edit
     @note = Note.find(params[:id])
     @note.textiled = false
+    redirect_to notes_path unless can_access?
   end
 
   def create
@@ -60,10 +61,14 @@ class NotesController < ApplicationController
 
   def destroy
     @note = Note.find(params[:id])
+    redirect_to notes_path unless can_access?
     @note.destroy
-
     respond_to do |format|
       format.html { redirect_to(notes_url) }
     end
   end
+  
+  def example
+  end
+  
 end

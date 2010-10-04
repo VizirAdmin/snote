@@ -1,0 +1,36 @@
+h1. Snote
+
+h2. Why does Snote exist?
+
+Because I was in trouble for to maintain my notes. Some were in Google Docs, another in simples files in my computer, another in my notebook. Ou seja, a mess!
+
+Therefore, I decided to create a tool where I could write my notes in a simple and fast way. And more, I' m planning, to do the search in a very nice way to find my notes.
+
+Snote is a tool to help you to store your knowledge, after all, is a sucks, don't remember something you know.
+
+h2. What does Snote use?
+
+* Rails 3 - a really cool framework for web apps
+* Devise - a brazilian gem very simple and nice for authentication stuff
+* Acts-as-taggable-on - ow! Tags in a simple way!
+* RedCloth - module for using the textile markup language
+* Haml - less code and more legible code in views
+
+h2. How to setup application
+
+You can run Snote running the following commands:
+
+<pre>  $ git clone git://github.com/Vizir/snote.git && cd snote
+  $ cp config/database.yml.example config/database.yml
+  $ bundle install
+  $ rake db:create
+  $ rake db:migrate
+  $ rails s</pre>
+
+h2. Maintainers
+
+* Fabrício Campos ("github.com/FabricioFFC":http://github.com/FabricioFFC)
+
+h2. How to collaborate
+
+If you would collaborate, you can create a fork, apply the modification and submit a pull request :)
