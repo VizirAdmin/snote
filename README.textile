@@ -2,7 +2,7 @@ h1. Snote
 
 h2. Why does Snote exist?
 
-Because I was in trouble for to maintain my notes. Some were in Google Docs, another in simples files in my computer, another in my notebook. Ou seja, a mess!
+Because I was in trouble for to maintain my notes. Some were in Google Docs, another in simples files in my computer, another in my notebook. In summary, a mess!
 
 Therefore, I decided to create a tool where I could write my notes in a simple and fast way. And more, I' m planning, to do the search in a very nice way to find my notes.
 
