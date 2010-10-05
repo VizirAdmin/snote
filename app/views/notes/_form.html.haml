@@ -18,7 +18,7 @@
       %br
       = text_field_tag :tags, @note.tag_list.join(', ')
     .actions
-      = f.submit
+      = f.submit :disable_with => I18n.t('please_wait')
     = link_to I18n.t('back'), notes_path
 .Right
   #help_text

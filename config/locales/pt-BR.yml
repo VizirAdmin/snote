@@ -1,5 +1,6 @@
 pt-BR:
   # snote
+  please_wait: "Anotação sendo salva..."
   confirmation: "Você tem certeza?"
   back: "Voltar"
   error: "Erro"
