@@ -9,7 +9,9 @@
 
   %body
     #snote
-      = image_tag "/images/snote_title.png", :id =>'logo'
+      #logo
+        = link_to (image_tag "/images/snote_title.png", :alt => "Snote", 
+          :title =>"Snote"), root_path
       - if current_user
         #links_menu
           = link_to I18n.t('user.edit_link'), edit_user_registration_path

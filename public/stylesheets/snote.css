@@ -97,6 +97,8 @@ position:absolute;
 
 #snote #logo{float:left;display:block;padding-bottom:10px;}
 
+#snote #logo a, #snote #logo a:hover{color:transparent;border:0;background-color:transparent;}
+
 #snote #help_text{min-width:200px;padding:5px 20px 0 9px;}
 
 #snote .textileexamples{margin-left:15px}
