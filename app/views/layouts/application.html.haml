@@ -15,8 +15,9 @@
           :title =>"Snote"), root_path
       - if current_user
         #links_menu
-          = link_to I18n.t('user.edit_link'), edit_user_registration_path
-          |
+          - if current_user.email != 'demo@snote.com'
+            = link_to I18n.t('user.edit_link'), edit_user_registration_path
+            |
           = link_to I18n.t('logout'), destroy_user_session_path
 
       = yield

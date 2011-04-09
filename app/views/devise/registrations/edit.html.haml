@@ -1,14 +1,17 @@
+- if current_user.email == 'demo@snote.com'
+  :javascript
+    window.location.replace("http://snote.heroku.com");
 #bg_form
   %h2
     = I18n.t('user.editing')
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
     - if @user.errors.any?
       .error_explanation
-      %h2 
+      %h2
         = pluralize(@user.errors.count, I18n.t('error'))
       %ul
         - @user.errors.full_messages.each do |msg|
-          %li 
+          %li
             = msg
     %p
       = f.label :email
@@ -16,7 +19,7 @@
       = f.text_field :email
     %p
       = f.label :password
-      %i 
+      %i
         = I18n.t('devise.registrations.hint_alter_password')
       %br/
       = f.password_field :password
@@ -32,3 +35,4 @@
       = f.password_field :current_password
     %p= f.submit I18n.t('update')
   = link_to I18n.t('back'), :back
+
