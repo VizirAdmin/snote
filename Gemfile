@@ -1,16 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'devise'
 gem 'mysql2'
 gem 'acts-as-taggable-on'
-gem 'RedCloth'
+gem 'RedCloth', :require => 'redcloth'
 gem 'haml'
 gem 'hpricot'
 gem 'ruby_parser'
+gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -32,3 +33,4 @@ gem 'ruby_parser'
 # group :development, :test do
 #   gem 'webrat'
 # end
+

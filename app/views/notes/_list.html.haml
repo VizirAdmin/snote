@@ -1,0 +1,10 @@
+- notes.each do |note|
+  .note
+    = button_to I18n.t('note.delete'), {:action => 'destroy', :id => note.id}, :method => :delete, :class => 'links_button'
+    = button_to I18n.t('note.edit'), {:action => 'edit', :id => note.id}, :method => :get, :class => 'links_button'
+    =raw note.text
+    .tags
+      - note.tags.each do |tag|
+        %li
+          =  tag.name
+

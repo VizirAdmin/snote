@@ -1,0 +1,2 @@
+page.replace_html "notes", :partial => "list", :locals => {:notes => @notes}
+

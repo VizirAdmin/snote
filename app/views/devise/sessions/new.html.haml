@@ -1,7 +1,7 @@
 #explication
   = image_tag "explication.png"
 #bg_form
-  %h2 
+  %h2
     = I18n.t('login')
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     = alert
@@ -19,8 +19,20 @@
         = f.label :remember_me
     %p= f.submit I18n.t('login')
   = link_to I18n.t('user.sign_up'), new_user_registration_path
+  %br
+  %p
+  Quer conhecer antes o Snote?
+  %br
+  Acesse com a conta demo:
+  %br
+  %b E-mail:
+  %i demo@snote.com.br
+  %br
+  %b Senha:
+  %i demo
 #credit
   %p
     <strong>Um #{link_to "projeto", "http://github.com/Vizir/snote"} <i>open source</i> desenvolvido por:</strong> #{link_to "Fabrício Ferrari de Campos", "http://twitter.com/fabricioffc"}.
-  
-  <strong>Uma iniciativa do time do</strong> #{link_to "Vizir", "http://www.vizir.com.br"}.      
+
+  <strong>Uma iniciativa do time do</strong> #{link_to "Vizir", "http://www.vizir.com.br"}.
+

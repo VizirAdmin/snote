@@ -1,5 +1,5 @@
 .Left{:style => "clear:left;width:47%;padding-right:10px;"}
-  .div{:style => "clear:both;padding-top:5px;color:#FFB515"}
+  .example_title
     %h2 Versão Textile:
   %p h1. Exemplo de texto usando _Textile_
   %p O *Snote* nasceu da necessidade de seu criador, em manter as suas anotações.
@@ -17,31 +17,31 @@
 
   %p Com o Snote podemos por exemplo, adicionar textos pré-formatados de duas formas.
 
-  %p pre. sudo apt-get install ruby  
+  %p pre. sudo apt-get install ruby
 
   %p No caso em que o texto pré-formatado tiver mais de uma linha, podemos usar:
 
-  %p pre.. sudo apt-get install ruby rubygems 
+  %p pre.. sudo apt-get install ruby rubygems
   %p sudo gem install rails
 
   %p p. Para encerrar um texto pré-formatado de várias linhas utilizando a tag *pre..*, precisamos iniciar um novo bloco de forma implícita, utilizando por exemplo o *p.*.
 
   %p Uma forma mais fléxivel de criar texto pré-formatado, é utilizar a própria tag do _html_ *pre*:
 
-  %p 
+  %p
     =h "<pre>sudo apt-get install ruby rubygems"
     %br
     =h "sudo gem install rails</pre>"
-        
+
   %p Como acabamos de ver, também podemos utilizar todas as tags _html_ em nossas anotações. E com isso juntamos o melhor de dois mundos:
 
   %p
     \# A simplicidade da linguagem de marcação _Textile_;
     %br
     \# A flexibilidade e marcações avançadas do _html_.
-  %p  
+  %p
     h2. Tabela
-  %p  
+  %p
     table{border:1px solid black}.
     %br
       |\2=. Super-Heróis|
@@ -55,37 +55,37 @@
       |Super-Homem|Clark Kent|
     %br
       |Batman|Bruce Wayne|
-  %p  
+  %p
     h2. Alinhamento
-  %p  
+  %p
     p<. Esquerda
-  %p  
+  %p
     p>. Direita
-  %p  
+  %p
     p=. Centro
-  %p  
+  %p
     h2. Citações
-  %p  
+  %p
     bq. Esta é uma citação
-  %p  
+  %p
     Outra forma de citar é:
-  %p  
+  %p
     bq.. Esta é uma outra citação
-  %p  
+  %p
     Com dois parágrafos.
-  %p  
+  %p
     h2. Notas de página
   %p
     O projeto do Snote é _opensource_ e seu código está disponível no Github.[1]
-  %p  
+  %p
     fn1. "Github":http://github.com/Vizir/snote
-  %p  
+  %p
     h2. Saiba mais
-  %p  
+  %p
     Saiba mais marcações em: "http://redcloth.org/textile":http://redcloth.org/textile
 
 .Right{:style => "width:51%;border-left:1px solid;padding-left:10px;"}
-  .div{:style => "clear:both;padding-top:5px;color:#FFB515"}
+  .example_title
     %h2 Versão renderizada:
   :textile
     h1. Exemplo de texto usando _Textile_
@@ -102,11 +102,11 @@
 
     Com o Snote podemos por exemplo, adicionar textos pré-formatados de duas formas.
 
-    pre. sudo apt-get install ruby  
+    pre. sudo apt-get install ruby
 
     No caso em que o texto pré-formatado tiver mais de uma linha, podemos usar:
 
-    pre.. sudo apt-get install ruby rubygems 
+    pre.. sudo apt-get install ruby rubygems
     sudo gem install rails
 
     p. Para encerrar um texto pré-formatado de várias linhas utilizando a tag *pre..*, precisamos iniciar um novo bloco de forma implícita, utilizando por exemplo o *p.*.
@@ -119,9 +119,9 @@
     Como acabamos de ver, também podemos utilizar todas as tags _html_ em nossas anotações. E com isso juntamos o melhor de dois mundos:
     # A simplicidade da linguagem de marcação _Textile_;
     # A flexibilidade e marcações avançadas do _html_.
-    
+
     h2. Tabela
-    
+
     table{border:1px solid black}.
     |\2=. Super-Heróis|
     |_. super-herói|_. Nome|
@@ -129,31 +129,32 @@
     |Homem de Ferro|Tony Stark|
     |Super-Homem|Clark Kent|
     |Batman|Bruce Wayne|
-    
+
     h2. Alinhamento
-    
+
     p<. Esquerda
-    
+
     p>. Direita
-    
+
     p=. Centro
-    
+
     h2. Citações
-    
+
     bq. Esta é uma citação
-    
+
     Outra forma de citar é:
-    
+
     bq.. Esta é uma outra citação
-    
+
     Com dois parágrafos.
-    
+
     h2. Notas de página
-    
+
     O projeto do Snote é _opensource_ e seu código está disponível no Github.[1]
-    
+
     fn1. "Github":http://github.com/Vizir/snote
-    
+
     h2. Saiba mais
-    
+
     Saiba mais marcações em: "http://redcloth.org/textile":http://redcloth.org/textile
+

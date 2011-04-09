@@ -1,12 +1,18 @@
 # coding: utf-8
 class NotesController < ApplicationController
-  
-  before_filter :authenticate_user!
-  
-  def index
-    @notes = Note.find_my_notes(current_user.id)
 
+  before_filter :authenticate_user!
+
+  def index
+    search = params[:search]
+    if search.blank?
+      @notes = Note.find_my_notes(current_user.id)
+    else
+      @notes = Note.with_tag(search)
+    end
+    @tags = Note.find_all_tags(@notes)
     respond_to do |format|
+      format.js if request.xhr?
       format.html
     end
   end
@@ -15,7 +21,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
 
     respond_to do |format|
-      format.html 
+      format.html
     end
   end
 
@@ -53,8 +59,10 @@ class NotesController < ApplicationController
     respond_to do |format|
       if @note.update_attributes(params[:note])
         format.html { redirect_to(notes_url, :notice => 'Anotação atualizada com sucesso!') }
+        format.js
       else
         format.html { render :action => "edit" }
+        format.js
       end
     end
   end
@@ -67,8 +75,9 @@ class NotesController < ApplicationController
       format.html { redirect_to(notes_url) }
     end
   end
-  
+
   def example
   end
-  
+
 end
+

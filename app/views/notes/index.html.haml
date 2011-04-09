@@ -1,16 +1,21 @@
 .new
   = link_to I18n.t('note.new'), new_note_path, :class => 'links_button'
-- @notes.each do |note|
-  .note
-    = link_to I18n.t('note.delete'), note, :confirm => I18n.t('confirmation'), :method => :delete, :class => 'links_button'
-    = link_to I18n.t('note.edit'), edit_note_path(note), :class => 'links_button'
-    =raw note.text
-    .tags
-      %b Tags: 
-      %i 
-        - if note.tags.size > 0
-          = note.tag_list  
-        - else
-          = I18n.t('note.notags')
-        
-        
+- if @notes.size > 0
+  #search_bar
+    - form_tag do
+      = text_field_tag :search, '', :size => 20
+      = button_to(t('search'), url_for(:action => :search), :remote => true, :disable_with => t('please_wait_searching'), :id => 'search_submit')
+#notes
+  = render :partial => "list", :locals => {:notes => @notes}
+  - if @notes.size == 0
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+    #zero_notes
+      = t('note.zero_notes').html_safe
+:javascript
+  $(document).ready(function(){
+    var data = #{array_or_string_for_javascript(@tags)};
+    $( "#search" ).autocomplete({
+      source: data
+    });
+  });
+
