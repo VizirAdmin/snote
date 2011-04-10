@@ -16,12 +16,13 @@ class Note < ActiveRecord::Base
     tags
   end
 
-  def self.with_tag(tag)
+  def self.with_tag(tag, current_user_id)
     find_by_sql(["
       SELECT * FROM notes n
       INNER JOIN taggings ta ON ta.taggable_id = n.id
       INNER JOIN tags t ON ta.tag_id = t.id
-      WHERE t.name LIKE ?", "%#{eval("tag")}%"])
+      WHERE t.name LIKE ?
+      AND n.user_id = ?", "%#{eval("tag")}%", current_user_id])
   end
 end
 

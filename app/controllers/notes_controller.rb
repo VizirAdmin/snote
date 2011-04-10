@@ -8,7 +8,7 @@ class NotesController < ApplicationController
     if search.blank?
       @notes = Note.find_my_notes(current_user.id)
     else
-      @notes = Note.with_tag(search)
+      @notes = Note.with_tag(search, current_user.id)
     end
     @tags = Note.find_all_tags(@notes)
     respond_to do |format|

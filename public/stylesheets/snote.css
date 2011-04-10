@@ -8,12 +8,6 @@ body, p, ol, ul, td{
   line-height: 18px;
 }
 
-input {
-  -moz-border-radius:5px 5px 5px 5px;
-  -webkit-border-radius:5px 5px 5px 5px;
-  border-radius:5px 5px 5px 5px;
-}
-
 #zero_notes {
   clear: left;
   font-family: 'Cabin Sketch',arial,serif;
@@ -176,6 +170,7 @@ position:absolute;
   clear: left;
   margin: 0 auto;
   text-align: center;
+  height: 25px;
 }
 
 #search_bar div{
@@ -184,9 +179,7 @@ position:absolute;
 }
 
 #search_bar input#search{
-  border-color: #CCCCCC #999999 #999999 #CCCCCC;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid #CCCCCC;
   color: #000000;
   font: 18px arial,sans-serif bold;
   margin: 0;
@@ -194,11 +187,19 @@ position:absolute;
 }
 
 #search_bar input[type="submit"]{
-  background-color: #E1E1E1;
-  border-color: #CCCCCC #999999 #999999 #CCCCCC;
-  border-style: solid;
-  border-width: 1px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  background: -moz-linear-gradient(center top , #FFFFFF, #EFEFEF) repeat scroll 0 0 #F6F6F6;
+  background: -webkit-linear-gradient(#FFFFFF, #EFEFEF);
+  border: 1px solid #CCCCCC;
+  color: #000000;
+  cursor: pointer;
   height: 25px;
+  margin-left: -5px;
+  overflow: visible;
+  vertical-align: middle;
+  white-space: nowrap;
   width: 100px;
 }
 
@@ -210,10 +211,30 @@ position:absolute;
 }
 
 #bg_form #user_submit{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  box-shadow: 0 1px 3px #999;
   width: 80px;
+  background-color: transparent;
+  border: medium none;
+  background: url("/images/alert-overlay.png") repeat-x scroll 0 0 #FF6700;
+  border: 0 none !important;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px !important;
+  font-weight: bold;
+  line-height: 1;
+  padding: 4px 6px !important;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#user_new #user_submit{
-  width: 100px;
-}
+#bg_form #user_submit:hover{background-color:#F87822;}
+
+#user_new #user_submit{width: 110px;}
 
