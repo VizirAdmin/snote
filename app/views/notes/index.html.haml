@@ -7,10 +7,14 @@
       = button_to(t('search'), url_for(:action => :search), :remote => true, :disable_with => t('please_wait_searching'), :id => 'search_submit')
 #notes
   = render :partial => "list", :locals => {:notes => @notes}
-  - if @notes.size == 0
+  - if @notes.size == 0 && @search.nil?
     <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
     #zero_notes
       = t('note.zero_notes').html_safe
+  - elsif @notes.size == 0 && !@search.nil?
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+    #zero_notes
+      = t('note.not_found').html_safe
 :javascript
   $(document).ready(function(){
     var data = #{array_or_string_for_javascript(@tags)};

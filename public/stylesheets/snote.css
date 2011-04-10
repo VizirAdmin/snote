@@ -23,6 +23,10 @@ body, p, ol, ul, td{
 
 #zero_notes div{margin-top:25px;}
 
+#zero_notes a{text-decoration:none;}
+
+#zero_notes a:hover{background-color:transparent !important;text-decoration:none;}
+
 pre{
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;

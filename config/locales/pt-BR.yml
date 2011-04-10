@@ -18,6 +18,7 @@ pt-BR:
     notags: "Sem tags."
     zero_notes: "<div>Não há anotações.</div><div>Clique no botão <b>nova</b> e crie a sua primeira anotação.</div>"
     textk: "Texto*"
+    not_found: "<div>Nenhuma anotação foi encontrada.</div><div><a href='/'><b>*Voltar*</b></a></div>"
   user:
     creating: "Registro"
     sign_up: "Registrar-se"

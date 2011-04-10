@@ -4,11 +4,11 @@ class NotesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    search = params[:search]
-    if search.blank?
+    @search = params[:search]
+    if @search.blank?
       @notes = Note.find_my_notes(current_user.id)
     else
-      @notes = Note.with_tag(search, current_user.id)
+      @notes = Note.with_tag(@search, current_user.id)
     end
     @tags = Note.find_all_tags(@notes)
     respond_to do |format|
