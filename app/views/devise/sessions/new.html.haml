@@ -1,10 +1,11 @@
 #explication
   = image_tag "explication.png"
 #bg_form
-  %h2
+  %h1
     = I18n.t('login')
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    = alert
+    #error_messages
+      = alert
     %p
       = f.label :email
       %br

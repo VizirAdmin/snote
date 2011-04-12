@@ -197,11 +197,13 @@ position:absolute;
   background: -moz-linear-gradient(center top , #FFFFFF, #EFEFEF) repeat scroll 0 0 #F6F6F6;
   background: -webkit-linear-gradient(#FFFFFF, #EFEFEF);
   border: 1px solid #CCCCCC;
-  color: #000000;
+  color: #444444;
   cursor: pointer;
+  font-weight: bold;
   height: 25px;
   margin-left: -5px;
   overflow: visible;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
   vertical-align: middle;
   white-space: nowrap;
   width: 100px;
@@ -238,7 +240,18 @@ position:absolute;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#bg_form #user_submit:hover{background-color:#F87822;}
+#bg_form #user_submit:hover{background-color:#F16100;}
 
 #user_new #user_submit{width: 110px;}
+
+#error_messages{
+  color: #F94734;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 1px 1px #CD3120;
+}
+
+#error_messages ul{
+  font-size: 16px;
+}
 

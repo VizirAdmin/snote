@@ -17,12 +17,9 @@ class Note < ActiveRecord::Base
   end
 
   def self.with_tag(tag, current_user_id)
-    find_by_sql(["
-      SELECT * FROM notes n
-      INNER JOIN taggings ta ON ta.taggable_id = n.id
-      INNER JOIN tags t ON ta.tag_id = t.id
-      WHERE t.name LIKE ?
-      AND n.user_id = ?", "%#{eval("tag")}%", current_user_id])
+    all(:conditions => ["tags.name LIKE ? AND notes.user_id = ?","%#{eval("tag")}%", current_user_id],
+        :joins => "INNER JOIN taggings ON taggings.taggable_id = notes.id
+          INNER JOIN tags ON taggings.tag_id = tags.id")
   end
 end
 
