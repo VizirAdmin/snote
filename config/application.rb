@@ -51,7 +51,7 @@ module Snote
       :port => "587",
       :domain => "snote.heroku.com",
       :authentication => :plain,
-      :user_name => "snote@gmail.com",
+      :user_name => "snoteapp@gmail.com",
       :password => "notesmadeeasy"
     }
   end
