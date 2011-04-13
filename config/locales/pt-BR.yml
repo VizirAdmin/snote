@@ -249,7 +249,7 @@ pt-BR:
       confirmation_instructions:
         subject: 'Instruções de confirmação'
       reset_password_instructions:
-        subject: 'Reinicie as instruções da palavra-passe'
+        subject: 'Snote: Instruções para recuperar senha'
       unlock_instructions:
         subject: 'Instruções de desbloqueio'
 
