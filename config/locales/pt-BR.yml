@@ -28,6 +28,8 @@ pt-BR:
     forgot_password: "Esqueceu a senha?"
     info_to_recover_password: "Informe o seu e-mail para recuperar a senha"
     recover_password: "Me enviar email para recuperar a senha"
+    update_password: "Alterar a minha senha"
+    title_to_change_password: "Alteração da senha de acesso"
   helpers:
     submit:
       create: "Criar %{model}"
@@ -252,4 +254,7 @@ pt-BR:
         subject: 'Snote: Instruções para recuperar senha'
       unlock_instructions:
         subject: 'Instruções de desbloqueio'
+  errors:
+    messages:
+      not_saved: "Erro"
 
