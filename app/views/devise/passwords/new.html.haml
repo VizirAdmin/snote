@@ -1,9 +1,11 @@
-%h2 Forgot your password?
-= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-  = devise_error_messages!
-  %p
-    = f.label :email
-    %br/
-    = f.text_field :email
-  %p= f.submit "Send me reset password instructions"
-= render :partial => "devise/shared/links"
+#bg_form
+  %h1
+    = I18n.t('user.info_to_recover_password')
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    = devise_error_messages!
+    %p
+      = f.label :email
+      %br/
+      = f.text_field :email
+    %p= f.submit I18n.t('user.recover_password'), :class => 'recover_password'
+

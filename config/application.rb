@@ -43,6 +43,17 @@ module Snote
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :enable_starttls_auto => true,
+      :tls => true,
+      :address => "smtp.gmail.com",
+      :port => "587",
+      :domain => "snote.heroku.com",
+      :authentication => :plain,
+      :user_name => "snote@gmail.com",
+      :password => "notesmadeeasy"
+    }
   end
 end
 

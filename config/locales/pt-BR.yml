@@ -25,6 +25,9 @@ pt-BR:
     edit: "Editar"
     edit_link: "Editar usuário"
     editing: "Editando usuário"
+    forgot_password: "Esqueceu a senha?"
+    info_to_recover_password: "Informe o seu e-mail para recuperar a senha"
+    recover_password: "Me enviar email para recuperar a senha"
   helpers:
     submit:
       create: "Criar %{model}"

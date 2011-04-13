@@ -21,6 +21,8 @@
     %p= f.submit I18n.t('login')
   = link_to I18n.t('user.sign_up'), new_user_registration_path
   %br
+  = link_to I18n.t('user.forgot_password'), new_password_path(resource_name)
+  %br
   %p
   Quer conhecer antes o Snote?
   %br

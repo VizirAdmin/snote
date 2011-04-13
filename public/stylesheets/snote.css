@@ -56,6 +56,9 @@ position:absolute;
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
   background:none repeat scroll 0 0 #CCCCCC;
   float:right;
   margin:5px 5px 0 0;
@@ -75,6 +78,9 @@ position:absolute;
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.8);
   background:none repeat scroll 0 0 #CCCCCC;
   clear:both;
   display:block;
@@ -155,12 +161,15 @@ position:absolute;
 }
 
 #snote .tags li {
-  margin:0;!
-  float: right;
-  list-style: none outside none;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
+  -moz-box-shadow: 0 1px 3px #999999;
+  -webkit-box-shadow: 0 1px 3px #999999;
+  box-shadow: 0 1px 3px #999999;
+  margin:0 !important;
+  float: right;
+  list-style: none outside none;
   background-color: #4B4444;
   color: #FFFFFF;
   display: inline-block;
@@ -254,4 +263,6 @@ position:absolute;
 #error_messages ul{
   font-size: 16px;
 }
+
+.recover_password {width: 270px !important;}
 
