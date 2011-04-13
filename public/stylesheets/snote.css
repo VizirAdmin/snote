@@ -167,7 +167,7 @@ position:absolute;
   -moz-box-shadow: 0 1px 3px #999999;
   -webkit-box-shadow: 0 1px 3px #999999;
   box-shadow: 0 1px 3px #999999;
-  margin:0 !important;
+  margin:0; !important
   float: right;
   list-style: none outside none;
   background-color: #4B4444;
