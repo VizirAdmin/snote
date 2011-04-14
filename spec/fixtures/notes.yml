@@ -1,0 +1,10 @@
+abigo_note_one:
+  text: 'teste'
+  user: abigo
+abigo_note_two:
+  text: 'minha segunda anotação'
+  user: abigo
+joao_note_one:
+  text: 'minha primeira anotação'
+  user: joao
+

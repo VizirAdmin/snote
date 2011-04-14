@@ -13,7 +13,7 @@ pt-BR:
     new: "Nova"
     edit: "Editar"
     delete: "Apagar"
-    creating: "Criando anotação"
+    creating: "Nova anotação"
     editing: "Editando anotação"
     notags: "Sem tags."
     zero_notes: "<div>Não há anotações.</div><div>Clique no botão <b>nova</b> e crie a sua primeira anotação.</div>"
