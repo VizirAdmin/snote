@@ -9,6 +9,7 @@ gem 'haml'
 gem 'hpricot'
 gem 'ruby_parser'
 gem 'jquery-rails'
+gem 'heroku_backup_task'
 
 group :development, :test do
   gem 'rspec-rails'
