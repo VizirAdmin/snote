@@ -9,7 +9,7 @@ gem 'haml'
 gem 'hpricot'
 gem 'ruby_parser'
 gem 'jquery-rails'
-gem 'heroku_backup_task'
+gem 'heroku_backup_task', :git => 'git://github.com/ddollar/heroku_backup_task.git'
 
 group :development, :test do
   gem 'rspec-rails'
