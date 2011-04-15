@@ -89,7 +89,7 @@ position:absolute;
   padding:10px;
 }
 
-#snote .tags{padding:0 5px 0 0; text-align:right;}
+#snote .tags{padding:0 5px 0 0; text-align:right; margin-top: 10px;}
 
 #snote h1{
   border-bottom:1px solid #323231;
@@ -161,9 +161,9 @@ position:absolute;
 }
 
 #snote .tags li {
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   -moz-box-shadow: 0 1px 3px #999999;
   -webkit-box-shadow: 0 1px 3px #999999;
   box-shadow: 0 1px 3px #999999;
