@@ -313,9 +313,9 @@ a:hover.public_link{
 }
 
 .alert_message{
-  -moz-border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
   background-color: red;
   bottom: 0;
   color: white;
