@@ -145,6 +145,12 @@ position:absolute;
 
 #snote .new{float:left;margin:8px 0 0 10px;}
 
+#snote .new a{
+  height: 20px !important;
+  text-align: center;
+  width: 40px;
+}
+
 #snote #logo{float:left;display:block;padding-bottom:10px;}
 
 #snote #logo a, #snote #logo a:hover{color:transparent;border:0;background-color:transparent;}
@@ -293,9 +299,8 @@ position:absolute;
 }
 
 .tweet_button{
-  float: right;
-  margin-left: 15px;
-  margin-top: -3px;
+  display: inline;
+  margin-left: 10px;
 }
 
 .share_title{
@@ -305,13 +310,16 @@ position:absolute;
 }
 
 .share_options{
-  padding: 5px;
-  float: left;
+    float: left;
+    height: 20px;
+    padding: 5px;
+    position: relative;
 }
 
 a.public_link{
   color: #4183C4;
   text-decoration: none;
+  display: inline;
 }
 
 a:hover.public_link{
