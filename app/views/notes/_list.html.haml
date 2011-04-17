@@ -20,11 +20,11 @@
           Compartilhe a sua anotação:
         .share_options
           Link público:
-          %a{:href => "#{post_note_url(:user => current_user.name.downcase, :note_id => note.id)}", :class => "public_link", :target => "_blank"}
-            = post_note_url(:user => current_user.name.downcase, :note_id => note.id)
+          %a{:href => "#{post_note_url(:user => @user_name, :note_id => note.id)}", :class => "public_link", :target => "_blank"}
+            = post_note_url(:user => @user_name, :note_id => note.id)
           .tweet_button
             %a{:href => "http://twitter.com/share", :class => "twitter-share-button",
-               "data-url" => "#{post_note_url(:user => current_user.name.downcase, :note_id => note.id)}",
+               "data-url" => "#{post_note_url(:user => @user_name, :note_id => note.id)}",
                "data-via" => "snote_app",
                "data-text" => "#{t('my_new_note')}",
                "data-count" => "none"}
