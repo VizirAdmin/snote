@@ -28,7 +28,7 @@ body, p, ol, ul, td{
 #zero_notes a:hover{background-color:transparent !important;text-decoration:none;}
 
 pre{
-  -moz-border-radius:5px 5px 5pxb 5px;
+  -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
   background:none repeat scroll 0 0 #111111;
