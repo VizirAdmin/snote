@@ -23,7 +23,7 @@ class NotesController < ApplicationController
   def show
     user_username = params[:user]
     note_id = params[:note_id]
-    @user = User.find_by_username(user_username)
+    @user = User.find(:first, :conditions => [ "lower(username) = ?", user_username.downcase ])
     if !@user.blank?
       @note = Note.find_public_note(@user.id, note_id)
     end
