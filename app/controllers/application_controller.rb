@@ -9,7 +9,7 @@ private
 
   def update_username
     if !current_user.nil?
-     redirect_to(edit_user_registration_url(current_user)) if current_user.username.blank?
+     redirect_to edit_user_registration_path if current_user.username.blank?
     end
   end
 
