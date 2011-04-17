@@ -11,7 +11,7 @@ class NotesController < ApplicationController
     else
       @notes = Note.with_tag(@search, current_user.id)
     end
-    @user_name = current_user.username.downcase
+    @username = current_user.username.downcase
     @tags = Note.find_all_tags(@notes)
     respond_to do |format|
       format.js if request.xhr?

@@ -1,6 +1,9 @@
 - if current_user.email == 'demo@snote.com'
   :javascript
     window.location.replace("http://snote.heroku.com");
+- if current_user.username.blank?
+  .alert_message
+    Por favor, atualize o seu cadastro, adicionando o seu usuário
 #bg_form
   %h1
     = I18n.t('user.editing')
@@ -17,6 +20,10 @@
       = f.label :username
       %br/
       = f.text_field :username
+    %p
+      = f.label :email
+      %br/
+      = f.text_field :email
     %p
       = f.label :password
       %i
