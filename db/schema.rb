@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416232529) do
+ActiveRecord::Schema.define(:version => 20110417042516) do
 
   create_table "notes", :force => true do |t|
     t.text     "text"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(:version => 20110416232529) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_salt"
-    t.string   "name",                                :default => "Anônimo"
+    t.string   "username",                            :default => "Anônimo"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

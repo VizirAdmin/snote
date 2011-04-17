@@ -11,7 +11,7 @@ class NotesController < ApplicationController
     else
       @notes = Note.with_tag(@search, current_user.id)
     end
-    @user_name = (current_user.name.blank?)? t('user.anonymous'): current_user.name.downcase
+    @user_name = current_user.username.downcase
     @tags = Note.find_all_tags(@notes)
     respond_to do |format|
       format.js if request.xhr?
@@ -20,11 +20,12 @@ class NotesController < ApplicationController
   end
 
   def show
-    user_name = params[:user]
+    user_username = params[:user]
     note_id = params[:note_id]
-    @user = User.find_by_name(user_name)
-    @user_name = (@user.name.blank?)? t('user.anonymous') : @user.name
-    @note = Note.find_public_note(@user.id, note_id)
+    @user = User.find_by_username(user_username)
+    if !@user.blank?
+      @note = Note.find_public_note(@user.id, note_id)
+    end
   end
 
   def new

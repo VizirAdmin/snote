@@ -193,6 +193,7 @@ pt-BR:
         current_password: "Senha atual"
         password: "Senha"
         remember_me: "lembrar login?"
+        username: "Usuário"
     errors:
       template:
         header:
