@@ -2,6 +2,7 @@
 class NotesController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:show]
+  before_filter :update_username
   layout :choose_layout
 
   def index
@@ -98,6 +99,12 @@ private
       'public'
     else
       'application'
+    end
+  end
+
+  def update_username
+    if !current_user.nil?
+     redirect_to edit_user_registration_path if current_user.username.blank?
     end
   end
 
