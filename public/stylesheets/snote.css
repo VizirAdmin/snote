@@ -98,6 +98,14 @@ position:absolute;
   text-shadow: 0 1px 2px #867A7A;
 }
 
+.note .buttons{
+    display: block;
+    float: right;
+    height: 35px;
+    position: relative;
+    width: 500px;
+}
+
 .links_button{
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -105,20 +113,20 @@ position:absolute;
   -moz-box-shadow: 0 1px 3px #999;
   -webkit-box-shadow: 0 1px 3px #999;
   box-shadow: 0 1px 3px #999;
-  background:url("/images/alert-overlay.png") repeat-x scroll 0 0 #FFB515;
-  color:#FFFFFF;
-  cursor:pointer;
-  display:inline-block;
-  float:right;
-  font-weight:bold;
-  line-height:1;
-  margin-left:10px;
-  padding:4px 6px 4px !important;
-  position:relative;
-  text-decoration:none;
-  text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25);
-  border: 0 none !important;
-  font-size: 13px !important;
+    background: url("/images/alert-overlay.png") repeat-x scroll 0 0 #FFB515;
+    border: 0 none !important;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-size: 13px !important;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 10px;
+    padding: 7px !important;
+    position: inherit;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
 #notes .links_button{width: 100px !important;}
@@ -128,10 +136,9 @@ position:absolute;
 #snote .new .links_button:hover{background-color:#111111;}
 
 #snote .share{
-  background-color: #00BB3F;
-  height: 16.5px;
-  padding-top: 7px !important;
-  text-align: center;
+    background-color: #00BB3F;
+    height: 17px !important;
+    text-align: center;
 }
 
 #snote .share:hover{background-color:#1A9B46;}
