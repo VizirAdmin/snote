@@ -1,6 +1,7 @@
 abigo_note_one:
   text: 'teste'
   user: abigo
+  private: false
 abigo_note_two:
   text: 'minha segunda anotação'
   user: abigo

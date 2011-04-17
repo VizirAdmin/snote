@@ -9,6 +9,7 @@ pt-BR:
   update: "Atualizar"
   logout: "Logout"
   search: "Buscar"
+  my_new_note: "Confira a minha nova anotação:"
   note:
     new: "Nova"
     edit: "Editar"
@@ -19,6 +20,8 @@ pt-BR:
     zero_notes: "<div>Não há anotações.</div><div>Clique no botão <b>nova</b> e crie a sua primeira anotação.</div>"
     textk: "Texto*"
     not_found: "<div>Nenhuma anotação foi encontrada.</div><div><a href='/'><b>*Voltar*</b></a></div>"
+    powered_by: "Criada por:"
+    share: "Compartilhar"
   user:
     creating: "Registro"
     sign_up: "Registrar-se"
@@ -30,6 +33,7 @@ pt-BR:
     recover_password: "Me enviar email para recuperar a senha"
     update_password: "Alterar a minha senha"
     title_to_change_password: "Alteração da senha de acesso"
+    anonymous: "Anônimo"
   helpers:
     submit:
       create: "Criar %{model}"

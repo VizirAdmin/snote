@@ -1,0 +1,14 @@
+- if @note.nil?
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
+  #zero_notes
+    = t('note.not_found').html_safe
+- else
+  .note
+    =raw @note.text
+    .tags
+      - @note.tags.each do |tag|
+        %li
+          =  tag.name
+    .powered_by
+      = "<span>#{I18n.t('note.powered_by')}</span> #{@user.name}".html_safe
+

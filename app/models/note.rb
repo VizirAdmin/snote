@@ -21,5 +21,9 @@ class Note < ActiveRecord::Base
         :joins => "INNER JOIN taggings ON taggings.taggable_id = notes.id
           INNER JOIN tags ON taggings.tag_id = tags.id")
   end
+
+  def self.find_public_note(user_id, note_id)
+    Note.all(:conditions => {:private => false, :user_id => user_id, :id => note_id}).first
+  end
 end
 

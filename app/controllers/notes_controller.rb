@@ -1,7 +1,8 @@
 # coding: utf-8
 class NotesController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:show]
+  layout :choose_layout
 
   def index
     @search = params[:search]
@@ -18,11 +19,10 @@ class NotesController < ApplicationController
   end
 
   def show
-    @note = Note.find(params[:id])
-
-    respond_to do |format|
-      format.html
-    end
+    user_name = params[:user]
+    note_id = params[:note_id]
+    @user = User.find_by_name(user_name)
+    @note = Note.find_public_note(@user.id, note_id)
   end
 
   def new
@@ -36,6 +36,15 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @note.textiled = false
     redirect_to notes_path unless can_access?
+  end
+
+  def share
+    note = Note.find(params[:id])
+    note.private = false
+    note.save
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -77,6 +86,16 @@ class NotesController < ApplicationController
   end
 
   def example
+  end
+
+private
+
+  def choose_layout
+    if [ 'show'].include? action_name
+      'public'
+    else
+      'application'
+    end
   end
 
 end

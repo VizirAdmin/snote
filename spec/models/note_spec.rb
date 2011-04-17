@@ -18,6 +18,8 @@ describe Note do
 
   before(:each) do
     @user_abigo = users(:abigo)
+    @public_note = notes(:abigo_note_one)
+    @private_note = notes(:abigo_note_two)
   end
 
   describe 'find_my_notes' do
@@ -43,6 +45,16 @@ describe Note do
         n.user_id.should eq @user_abigo.id
         n.tags.first eq "user_id_#{@user_abigo.id}"
       end
+    end
+  end
+
+  describe 'with_tag' do
+    it 'find public note' do
+      Note.find_public_note(@user_abigo.id, @public_note.id).should eq @public_note
+    end
+
+    it 'return nil when note is private' do
+      Note.find_public_note(@user_abigo.id, @private_note.id).should be_nil
     end
   end
 

@@ -28,7 +28,7 @@ body, p, ol, ul, td{
 #zero_notes a:hover{background-color:transparent !important;text-decoration:none;}
 
 pre{
-  -moz-border-radius:5px 5px 5px 5px;
+  -moz-border-radius:5px 5px 5pxb 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
   background:none repeat scroll 0 0 #111111;
@@ -121,11 +121,20 @@ position:absolute;
   font-size: 13px !important;
 }
 
-#notes .links_button{width: 80px !important;}
+#notes .links_button{width: 100px !important;}
 
 #snote .new .links_button{background-color:#222222; float:left;margin:-2px 0 10px 13px;}
 
 #snote .new .links_button:hover{background-color:#111111;}
+
+#snote .share{
+  background-color: #00BB3F;
+  height: 16.5px;
+  padding-top: 7px !important;
+  text-align: center;
+}
+
+#snote .share:hover{background-color:#1A9B46;}
 
 #snote .new{float:left;margin:8px 0 0 10px;}
 
@@ -265,4 +274,41 @@ position:absolute;
 }
 
 .recover_password {width: 270px !important;}
+
+.powered_by {
+  clear: left;
+  font-family: 'Just Another Hand',arial,serif;
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tweet_button{
+  float: right;
+  margin-left: 15px;
+  margin-top: -3px;
+}
+
+.share_title{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.share_options{
+  padding: 5px;
+  float: left;
+}
+
+a.public_link{
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover.public_link{
+  text-decoration: underline;
+  background-color: transparent !important;
+}
 

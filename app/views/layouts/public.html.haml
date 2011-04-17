@@ -1,0 +1,16 @@
+!!!
+%html(lang='pt-BR')
+  %head
+    %meta(charset='utf-8')
+    %title Snote - notes made easy
+  = stylesheet_link_tag :all
+  <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+  = csrf_meta_tag
+  %body
+    #snote
+      #logo
+        = link_to (image_tag "/images/snote_title.png", :alt => "Snote",
+          :title =>"Snote"), root_path
+      = yield
+    = google_analytics
+

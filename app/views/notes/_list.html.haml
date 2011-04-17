@@ -2,9 +2,35 @@
   .note
     = button_to I18n.t('note.delete'), {:action => 'destroy', :id => note.id}, :method => :delete, :class => 'links_button'
     = button_to I18n.t('note.edit'), {:action => 'edit', :id => note.id}, :method => :get, :class => 'links_button'
+    - if note.private
+      = link_to I18n.t('note.share'), {:action => 'share', :id => note.id}, {:remote => true, :class => 'links_button share', :id => "share_#{note.id}"}
+    - else
+      = link_to I18n.t('note.share'), nil, {:class => 'links_button share', :id => "share_#{note.id}"}
+
     =raw note.text
     .tags
       - note.tags.each do |tag|
         %li
           =  tag.name
+  %div{:style => 'display:none'}
+    %div{:id => "inline_note_#{note.id}"}
+      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+      %div
+        .share_title
+          Compartilhe a sua anotação:
+        .share_options
+          Link público:
+          %a{:href => "#{post_note_url(:user => current_user.name.downcase, :note_id => note.id)}", :class => "public_link", :target => "_blank"}
+            = post_note_url(:user => current_user.name.downcase, :note_id => note.id)
+          .tweet_button
+            %a{:href => "http://twitter.com/share", :class => "twitter-share-button",
+               "data-url" => "#{post_note_url(:user => current_user.name.downcase, :note_id => note.id)}",
+               "data-via" => "snote_app",
+               "data-text" => "#{t('my_new_note')}",
+               "data-count" => "none"}
+              Tweet
+  :javascript
+    $(document).ready(function() {
+      $("#share_#{note.id}").colorbox({width:"50%", inline:true, href:"#inline_note_#{note.id}"});
+    });
 

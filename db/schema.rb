@@ -10,14 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409164026) do
+ActiveRecord::Schema.define(:version => 20110416232529) do
 
   create_table "notes", :force => true do |t|
     t.text     "text"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "private",    :default => true
   end
+
+  add_index "notes", ["user_id"], :name => "index_notes_on_user_id"
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -47,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20110409164026) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "email",                               :default => "",         :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",         :null => false
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20110409164026) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_salt"
+    t.string   "name",                                :default => "Anônimo"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
