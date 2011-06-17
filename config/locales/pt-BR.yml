@@ -34,6 +34,7 @@ pt-BR:
     update_password: "Alterar a minha senha"
     title_to_change_password: "Alteração da senha de acesso"
     anonymous: "Anônimo"
+    demo: "Quer conhecer antes o Snote?<br/>Acesse com a conta demo:"
   helpers:
     submit:
       create: "Criar %{model}"

@@ -158,6 +158,7 @@ position:absolute;
 #snote #help_text{min-width:200px;padding:5px 20px 0 9px;}
 
 #snote .textileexamples{margin-left:15px}
+#snote .textileexamples p {margin:0;padding: 0;}
 
 .Left{
   float:left;
