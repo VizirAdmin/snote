@@ -212,6 +212,7 @@ pt-BR:
         password: "Senha"
         remember_me: "lembrar login?"
         username: "Usuário"
+        language: "Linguagem"
     errors:
       template:
         header:
