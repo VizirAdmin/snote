@@ -22,39 +22,34 @@
     = link_to I18n.t('back'), notes_path
 .Right
   #help_text
-  %h2 Formatando o texto
-  %p
-    A formatação é feita com o
-    %em
-      = link_to 'Textile', "http://redcloth.org/hobix.com/textile/", :target => "_blank"
-    \.
-  %p
-    Possibilitando uma formatação simples, atráves de marcações fáceis.
-
-  %p
-    Segue alguns exemplos:
-
+  %h2= t('format.title')
+  %p= t('format.desc', :textile_link => link_to('Textile', "http://redcloth.org/hobix.com/textile/", :target => "_blank")).html_safe
+  %p= t('format.examples')
   .textileexamples
     %p
-      *negrito* → <strong>negrito</strong>
-      %br
-      _itálico_ →
-      %em
-        itálico
-      %br
+      = "*"+t('format.bold')+"*"
+      → 
+      %strong= t('format.bold')
+    %p
+      = "_"+t('format.italic')+"_"
+      → 
+      %em= t('format.italic')
+    %p
       "link":http://google.com →
       = link_to "link","http://google.com", :target => "_blank"
-      %br
-      pre. →  texto pré-formatado (<i>pre</i> do html)
-      %br
-      * → lista com marcador
-      %br
-      ** → segundo nível
-      %br
-      \# → lista numerada
-      %br
-      \## → segundo nível
-      %br
-      Veja mais marcações em:
-      = link_to "exemplo",notes_example_path, :target=> "_blank"
-
+    %p
+      pre. →  
+      = t('format.pre')
+    %p
+      * → 
+      = t('format.ul')
+    %p
+      ** → 
+      = t('format.2ndlevel')
+    %p
+      \# → 
+      = t('format.ol')
+    %p
+      \## → 
+      = t('format.2ndlevel')
+    %p= t('format.see', :link => link_to(t('format.example'),notes_example_path, :target=> "_blank")).html_safe

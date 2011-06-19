@@ -1,5 +1,58 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  # snote
+  please_wait: "Wait..."
+  please_wait_searching: "Searching..."
+  confirmation: "Are you shure?"
+  back: "Back"
+  error: "Error"
+  login: "Login"
+  update: "Refresh"
+  logout: "Logout"
+  search: "Search"
+  my_new_note: "Check my new note:"
+  note:
+    new: "New"
+    edit: "Edit"
+    delete: "Remove"
+    creating: "Create note"
+    editing: "Edit note"
+    notags: "No tags."
+    zero_notes: "<div>There are no notes.</div><div>Click on button <b>new</b> and create your first note.</div>"
+    textk: "Text*"
+    not_found: "<div>Note not found.</div><div><a href='/'><b>*Back*</b></a></div>"
+    powered_by: "Powerd by:"
+    share: "Share"
+  format:
+    title: "Formatting text"
+    desc: "Text is formatted using %{textile_link} markup.<br>This makes it simple to apply formattings using an easy markup."
+    examples: "Some examples:" 
+    bold: "Bold"
+    italic: "italic"
+    pre: "pre formatting like in html"
+    ul: "bulleted list"
+    ol: "numbered list"
+    2ndlevel: "2nd level"
+    see: "See the example note: %{link}"
+    example: "example"
+  user:
+    creating: "Register"
+    sign_up: "Register"
+    edit: "Edit"
+    edit_link: "Account settings"
+    editing: "Account settings"
+    forgot_password: "Forgot password?"
+    info_to_recover_password: "Email will be send to your inbox"
+    recover_password: "You will recieve a email for recover your account"
+    update_password: "Change password"
+    password: "Password"
+    title_to_change_password: "Change password"
+    anonymous: "Anonym"
+    demo: "Like to try out snote?<br />Login with the demo account:"
+  credit:
+    footer: "An open source %{project_link} by %{author}"
+    project: "project"
+    initiative: "An initiative of the team %{link}"
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"

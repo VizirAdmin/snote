@@ -40,6 +40,9 @@
         = I18n.t('devise.registrations.hint_current_password')
       %br/
       = f.password_field :current_password
+    %p
+      = f.label :language
+      %br= f.select :language, User.languages.invert
     %p= f.submit I18n.t('update')
   = link_to I18n.t('back'), root_path
 

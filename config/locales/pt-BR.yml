@@ -22,6 +22,18 @@ pt-BR:
     not_found: "<div>Nenhuma anotação foi encontrada.</div><div><a href='/'><b>*Voltar*</b></a></div>"
     powered_by: "Criada por:"
     share: "Compartilhar"
+  format:
+    title: "Formatando o texto"
+    desc: "A formatação é feita com o %{textile_link}.<br>Possibilitando uma formatação simples, atráves de marcações fáceis."
+    examples: "Segue alguns exemplos:"
+    bold: "negrito"
+    italic: "itálico"
+    pre: "texto pré-formatado (pre do html)"
+    ul: "lista com marcador"
+    ol: "lista numerada"
+    2ndlevel: "segundo nível"
+    see: "Veja mais marcações em: %{link}"
+    example: "exemplo"
   user:
     creating: "Registro"
     sign_up: "Registrar-se"
@@ -34,6 +46,12 @@ pt-BR:
     update_password: "Alterar a minha senha"
     title_to_change_password: "Alteração da senha de acesso"
     anonymous: "Anônimo"
+    demo: "Quer conhecer antes o Snote?<br/>Acesse com a conta demo:"
+    password: "Senha"
+  credit:
+    footer: "Um %{project_link} <i>open source</i> desenvolvido por: %{author}"
+    project: "projeto"
+    initiative: "Uma iniciativa do time do %{link}"
   helpers:
     submit:
       create: "Criar %{model}"
@@ -194,6 +212,7 @@ pt-BR:
         password: "Senha"
         remember_me: "lembrar login?"
         username: "Usuário"
+        language: "Linguagem"
     errors:
       template:
         header:
