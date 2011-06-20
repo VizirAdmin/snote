@@ -26,5 +26,8 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation
+    %p
+      = f.label :language
+      %br= f.select :language, User.languages.invert
     %p= f.submit I18n.t('user.sign_up')
 

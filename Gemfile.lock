@@ -52,7 +52,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mysql2 (0.2.7)
+    mysql (2.8.1)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -107,7 +107,7 @@ DEPENDENCIES
   haml
   hpricot
   jquery-rails
-  mysql2
+  mysql
   rails (= 3.0.5)
   rspec-rails
   ruby_parser
