@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   private
   def set_language
-    if !current_user.nil?
+    if !current_user.nil? && defined?(current_user.language)
       I18n.locale = current_user.language || I18n.default_locale
     end
   end
