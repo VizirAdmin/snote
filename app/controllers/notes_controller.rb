@@ -56,6 +56,7 @@ class NotesController < ApplicationController
     @note.textiled = false
     @note.tag_list = params[:tags]
     @note.user_id = current_user.id
+    @note.sanitize if @note.text.downcase.include?('<script>') && @note.text.downcase.include?('</script>')
     respond_to do |format|
       if @note.save
         format.html { redirect_to(notes_url, :notice => 'Anotação criada com sucesso!') }

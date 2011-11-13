@@ -25,5 +25,17 @@ class Note < ActiveRecord::Base
   def self.find_public_note(user_id, note_id)
     Note.all(:conditions => {:private => false, :user_id => user_id, :id => note_id}).first
   end
+
+  def sanitize
+    new_text = ''
+    self.text.split(' ').each do |t|
+      if t.include?('script')
+        new_text << "\"#{t}\""
+      else
+        new_text << t
+      end
+    end
+    self.text = new_text
+  end
 end
 
