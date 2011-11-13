@@ -8,7 +8,7 @@
       - else
         = link_to I18n.t('note.share'), nil, {:class => 'links_button share', :id => "share_#{note.id}"}
 
-    =raw h(note.text)
+    =raw h(note.text).html_safe
     .tags
       - note.tags.each do |tag|
         %li
