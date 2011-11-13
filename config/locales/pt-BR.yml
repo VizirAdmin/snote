@@ -49,7 +49,7 @@ pt-BR:
     demo: "Quer conhecer antes o Snote?<br/>Acesse com a conta demo:"
     password: "Senha"
   credit:
-    footer: "Um %{project_link} <i>open source</i> desenvolvido por: %{author}"
+    footer: "Um %{project_link} <i>open source</i> desenvolvido pela: %{author}"
     project: "projeto"
     initiative: "Uma iniciativa do time do %{link}"
   helpers:
