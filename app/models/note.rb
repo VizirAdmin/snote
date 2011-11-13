@@ -4,6 +4,8 @@ class Note < ActiveRecord::Base
   acts_as_textiled :text
   validates_presence_of :text
 
+  before_save :sanitize
+
   def self.find_my_notes(current_user_id)
     all(:conditions => "notes.user_id = #{current_user_id}",:order=>"id DESC")
   end
@@ -27,15 +29,18 @@ class Note < ActiveRecord::Base
   end
 
   def sanitize
-    new_text = ''
-    self.text.split(' ').each do |t|
-      if t.include?('script')
-        new_text << "\"#{t}\""
-      else
-        new_text << t
+    text_string = self.text.downcase
+    if text_string.include?('<script>') && text_string.include?('</script>')
+      new_text = ''
+      self.text.split(' ').each do |t|
+        if t.include?('script')
+          new_text << "\"#{t}\""
+        else
+          new_text << t
+        end
       end
+      self.text = new_text
     end
-    self.text = new_text
   end
 end
 
